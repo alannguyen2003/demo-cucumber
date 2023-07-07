@@ -16,12 +16,10 @@ public class MyStepdefs {
     @Given("^User enters \"(.*)\" and \"(.*)\"$")
     public void userEntersUsernameAndPassword(String username, String password) throws InterruptedException {
         webDriver = new ChromeDriver();
-        webDriver.get("http://localhost:8080/vsos/");
+        webDriver.get("http://localhost:2902/demo");
         webDriver.manage().window().maximize();
         Thread.sleep(4000);
-        WebElement signInLink = webDriver.findElement(new By.ByXPath("//nav[@class='main-menu clearfix']//a[normalize-space()='Sign In']"));
-        signInLink.click();
-        Thread.sleep(4000);
+
     }
 
     @When("User hit login button")
