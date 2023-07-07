@@ -13,6 +13,7 @@ public class MyStepdefs3 {
 
     @When("none when")
     public void noneWhen() {
+        assertEquals(4, 4);
     }
 
     @Then("none then")
